@@ -50,7 +50,7 @@ class ViewController: UIViewController {
 //----------------------------------------------------------------------------------
 // MARK:- Outlets
     @IBOutlet weak var welcomeLabel: UILabel!
-    
+    @IBOutlet weak var pressMeButton: UIButton!
     
     
 //----------------------------------------------------------------------------------
@@ -64,7 +64,14 @@ class ViewController: UIViewController {
 // MARK:- Actions
     
     @IBAction func pressMePressed(_ sender: Any) {
+        let randomIndex = arc4random_uniform(UInt32(greetings.count))
         
+        welcomeLabel.text = greetings[Int(randomIndex)]
+        
+        // Optional Chaining for titleLabel
+        // Essentially, we want to fail gracefully when
+        // pressMeButton.titleLabel is nil
+        pressMeButton.setTitle(pressMes[Int(randomIndex)], for: .normal)
         
     }
     

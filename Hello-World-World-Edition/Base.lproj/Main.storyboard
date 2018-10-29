@@ -43,6 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="pressMeButton" destination="qmE-I6-zsi" id="EkA-ui-yl1"/>
                         <outlet property="welcomeLabel" destination="iyO-A7-9OZ" id="VD3-2w-lLx"/>
                     </connections>
                 </viewController>
